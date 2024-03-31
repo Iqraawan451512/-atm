@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import inquiier from "inquirer";
 let myBalance = 10000;
 let myPin = 1234;
@@ -38,8 +39,6 @@ if (pinAnswer.pin === myPin) {
             myBalance -= amountAns.ammount;
             console.log(`${amountAns.amount} Withdraw Successfully`);
         }
-        myBalance -= amountAns.amount;
-        console.log("your remaining balance is " + myBalance);
     } // balance check
     else if (operationAns.operation === "blancecheck")
         console.log(`your blance is ${myBalance}`);
