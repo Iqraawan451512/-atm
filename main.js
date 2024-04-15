@@ -38,6 +38,8 @@ if (pinAnswer.pin === myPin) {
         else {
             myBalance -= amountAns.ammount;
             console.log(`${amountAns.amount} Withdraw Successfully`);
+            myBalance -= amountAns.amount;
+            console.log("your remaining balance is " + myBalance);
         }
     } // balance check
     else if (operationAns.operation === "blancecheck")

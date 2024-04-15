@@ -19,7 +19,7 @@ let operationAns = await inquiier.prompt([
        name: "operation",
        message :"please select operation",
        type :"list",
-       choices :["withdraw"  , "blancecheck","fastcash" ]
+       choices :["withdraw" , "blancecheck","fastcash" ]
  }
 
 ])
@@ -36,11 +36,15 @@ let amountAns = await inquiier.prompt([
 // for unsufficient Balance
 if ( amountAns.amount> myBalance){
 console.log("sorry!!!! unsufficient Balance");
+
 }
 
 else{
 myBalance -= amountAns.ammount;
 console.log(`${amountAns.amount} Withdraw Successfully`);
+ /*myBalance -= amountAns.amount;
+console.log("your remaining balance is " + myBalance);*/
+
 }
 
 }// balance check
